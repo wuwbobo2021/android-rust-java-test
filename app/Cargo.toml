@@ -1,3 +1,5 @@
+# Build it with `cargo-apk`.
+
 [package]
 name = "android-rust-java-test-apk"
 version = "0.1.0"

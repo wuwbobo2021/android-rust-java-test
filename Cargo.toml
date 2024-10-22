@@ -1,6 +1,7 @@
 [package]
 name = "android-rust-java-test"
 version = "0.1.0"
+authors = ["Slint Developers <info@slint.dev>", "wuwbobo2021 <wuwbobo@outlook.com>"]
 edition = "2021"
 publish = false
 

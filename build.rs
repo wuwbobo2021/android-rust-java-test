@@ -1,7 +1,7 @@
-// Copyright © SixtyFPS GmbH <info@slint.dev>
+﻿// Copyright © SixtyFPS GmbH <info@slint.dev>
 // SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-Slint-Royalty-free-2.0 OR LicenseRef-Slint-Software-3.0
 
-// Copied from Slint 1.8 source, modified for this test.
+// Copied from Slint 1.8 source, modified for this test program.
 
 use std::path::PathBuf;
 use std::process::Command;
@@ -135,6 +135,8 @@ fn main() {
         .args(&classes)
         .arg("--output")
         .arg(out_dir.as_os_str())
+        .arg("--min-api")
+        .arg("16")
         .output()
         .unwrap_or_else(|err| panic!("Error running {d8_path:?}: {err}"));
 
