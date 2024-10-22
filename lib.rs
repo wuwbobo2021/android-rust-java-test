@@ -152,7 +152,7 @@ where
             "dalvik/system/DexClassLoader",
             "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/ClassLoader;)V",
             &[
-                JValue::Object(&dex_path.into()),
+                JValue::Object(&dex_path),
                 JValue::Object(&out_dex_dir_path),
                 JValue::Object(&JObject::null()),
                 JValue::Object(&parent_dex_loader),
@@ -172,5 +172,5 @@ where
     let helper_class: JClass = helper_class.into();
 
     let helper_instance = env.new_object(helper_class, ctor_sig, ctor_args)?;
-    Ok(env.new_global_ref(&helper_instance)?)
+    env.new_global_ref(&helper_instance)
 }
